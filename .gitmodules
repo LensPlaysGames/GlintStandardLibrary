@@ -1,0 +1,3 @@
+[submodule "lcc"]
+	path = lcc
+	url = git@github.com:LensPlaysGames/LensorCompilerCollection.git
