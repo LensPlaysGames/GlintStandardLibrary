@@ -1,0 +1,8 @@
+bld
+dbg
+
+# Assembly
+*.s
+
+# Emacs Backups
+\#*\#
