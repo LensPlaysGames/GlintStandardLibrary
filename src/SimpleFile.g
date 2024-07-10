@@ -12,7 +12,7 @@ external SEEK_SET: cint;
 external SEEK_CUR: cint;
 external SEEK_END: cint;
 
-export read: [Byte](path: [Byte]) {
+export gstd_read: [Byte](path: [Byte]) {
     handle :: fopen path.data, "rb"[0];
 
     fseek handle 0 SEEK_END;
@@ -21,16 +21,16 @@ export read: [Byte](path: [Byte]) {
 
     contents : [Byte size];
 
-    fread contents.data[0] 1 (cint size) handle;
+    fread contents.data 1 (cint size) handle;
 
     fclose handle;
 
     return contents;
 };
 
-export write: Bool(path: [Byte], contents: [Byte]) discardable {
-    handle :: fopen path.data[0] "wb"[0];
-    fwrite contents.data[0] 1 (cint contents.size) handle;
+export gstd_write: Bool(path: [Byte], contents: [Byte]) discardable {
+    handle :: fopen path.data "wb"[0];
+    fwrite contents.data 1 (cint contents.size) handle;
     fclose handle;
 
     return true;
