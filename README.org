@@ -1,8 +1,8 @@
 * Glint Standard Library
 
-Glint is a programming language (go figure). Main implementation here: [[https://github.com/LensPlaysGames/LensorCompilerCollection/tree/main/lib/glint][Glint Library in LCC]].
+The standard library for Glint, the language covered by [[https://github.com/LensPlaysGames/LensorCompilerCollection/blob/main/docs/glint/thebook.pdf][this book]] and compiled by [[https://github.com/LensPlaysGames/LensorCompilerCollection][this compiler]].
 
-This is the standard library of that programming language, providing useful and common solutions for problems that you have already solved before, like reading a file, or doing certain string things.
+We provide useful and common solutions (via Glint modules) for problems that you have already solved before, like reading a file, or doing certain string things, or whathaveyou.
 
 See the documentation in [[file:docs/all.org][docs/]].
 
