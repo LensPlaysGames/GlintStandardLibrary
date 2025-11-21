@@ -1,0 +1,49 @@
+* Glint Standard Library Documentation
+
+# DEVELOPER NOTE: If a module declares a type, it should define a =format()= for that type as well.
+
+# DEVELOPER NOTE: Just because it's in libc doesn't mean it needs to be in Glint Standard Library. And vice versa. We may have to use non libc code to implement /some/ of this stuff.
+
+* =io= Module (export import path)
+- =File= type and functions to populate/operate it
+- file size()
+- file path()
+- file contents()
+- file write()
+- file append()
+- file prepend()
+- directory entries()
+- gather input
+# The idea is to be just enough for people to get started
+
+* =path= Module
+- path type
+- path separator string
+- path concat()
+- path file name()
+- path parent directory()
+- path directory()
+
+String manipulation that handles paths without the user having to "worry about" the platform.
+
+* =random= Module
+
+People who make games or examples like random numbers. Or just people trying to make a filename that won't clash =:^)=.
+
+* =time= Module
+
+Lots of programs need to either check file creation/modification times against the current time, display time to the user, or... yeah.
+
+* =args= Module
+- args_collect(config)
+
+* =env= Module
+
+Read environment variables.
+
+* =shellcmd= Module
+- system() interface
+
+* =algorithm= Module
+
+Takes views of T, applies given function in different ways (i.e. transform, folding, etc)

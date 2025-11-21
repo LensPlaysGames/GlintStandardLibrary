@@ -4,4 +4,6 @@ Glint is a programming language (go figure). Main implementation here: [[https:/
 
 This is the standard library of that programming language, providing useful and common solutions for problems that you have already solved before, like reading a file, or doing certain string things.
 
-# To bump LCC to latest version, do `git submodule --recursive --remote --merge`
+See the documentation in [[file:docs/all.org][docs/]].
+
+# To bump LCC to latest version, do `git submodule update --remote`
