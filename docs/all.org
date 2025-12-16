@@ -1,8 +1,12 @@
 * Glint Standard Library Documentation
 
-# DEVELOPER NOTE: If a module declares a type, it should define a =format()= for that type as well.
+# DEVELOPER NOTE: If a module declares a type, it should define a
+# format() for that type as well. If someone has something from the
+# standard library, they should be able to print it...
 
-# DEVELOPER NOTE: Just because it's in libc doesn't mean it needs to be in Glint Standard Library. And vice versa. We may have to use non libc code to implement /some/ of this stuff.
+# DEVELOPER NOTE: Just because it's in libc doesn't mean it needs to be
+# in Glint Standard Library. And vice versa. We may have to use non libc
+# code to implement /some/ of this stuff.
 
 * =io= Module (export import path)
 - =File= type and functions to populate/operate it
@@ -35,6 +39,7 @@ People who make games or examples like random numbers. Or just people trying to 
 Lots of programs need to either check file creation/modification times against the current time, display time to the user, or... yeah.
 
 * =args= Module
+
 - args_collect(config)
 
 * =env= Module
@@ -42,6 +47,7 @@ Lots of programs need to either check file creation/modification times against t
 Read environment variables.
 
 * =shellcmd= Module
+
 - system() interface
 
 * =algorithm= Module
