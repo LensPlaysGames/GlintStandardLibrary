@@ -7,6 +7,11 @@ File : struct {
   size : uint;
 };
 
+;; @returns whether or not file at Path 'p' exists.
+exists : bool(p : Path) {
+  ;; TODO: Return whether or not file at path 'p' exists.
+};
+
 read : [byte](f : File.ref) {
   ;; TODO: Read file
 };
@@ -29,4 +34,4 @@ directoryEntries : sum{error:uint, value:[DirectoryEntry]}(p : Path) {
 ;; a key the user has pressed on their keyboard.
 in : byte() {
   ;; TODO: call getc, or something.
-}
+};
