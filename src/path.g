@@ -1,7 +1,6 @@
 module path;
 
-;; Possibly just strong alias?
-Path : struct {
+Path :: struct {
   string : [byte];
 };
 
@@ -20,4 +19,10 @@ normalizeLexically : Path(p : Path) {
   ;;   "/foo/bar/../qux" -> "/foo/qux"
   ;; - remove duplicate path separators
   ;;   "foo//bar" -> "foo/bar"
+};
+
+absolute : Path(p : Path) {
+  ;; See C++ std.cc
+  ;; TODO: Requires passing string from C++
+  ;; __c_path_absolute p.string.data;
 };

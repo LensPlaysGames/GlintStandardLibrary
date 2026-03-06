@@ -2,19 +2,46 @@ module io;
 
 export import path;
 
-File : struct {
+File :: struct {
   path : Path;
-  size : uint;
 };
 
 ;; @returns whether or not file at Path 'p' exists.
 exists : bool(p : Path) {
-  ;; TODO: Return whether or not file at path 'p' exists.
+  ;; See C++ std.cc
+  __c_exists p.string.data;
 };
 
-read : [byte](f : File.ref) {
-  ;; TODO: Read file
+;; @returns contents of the given file.
+read : [byte](p : Path.ref) {
+  if not exists p,
+    return !{};
+
+  ;; TODO: If path does not point to a regular file...
+
+  file-handle :: fopen p.string.data, "rb"[0];
+  if not file-handle,
+    return !{};
+
+  ;; ftell
+  fseek file-handle, 0, _c_seek_end;
+  size :: ftell file-handle;
+  fseek file-handle, 0, _c_seek_set;
+
+  ;; fread
+  contents : [byte size];
+  bytes-read :: fread contents.data, 1, size, file-handle;
+  if bytes-read != size,
+    return !{};
+
+  ;; fclose
+  fclose file-handle;
+
+  return contents;
 };
+
+read : [byte](f : File.ref)
+  read f.path;
 
 write : bool(p : Path, data : [byte]) {
   ;; TODO: Ensure path validity.
