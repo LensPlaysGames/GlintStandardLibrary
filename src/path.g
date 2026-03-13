@@ -1,17 +1,20 @@
 module path;
 
+export
 Path :: struct {
   string : [byte];
 };
 
-concat : Path(a : Path, b : Path) {
+export
+concat : Path(a : Path.ref, b : Path.ref) {
   ;; TODO: a/b, basically.
 
   ;; a = "/foo", b = "bar" -> return "/foo/bar"
   ;; a = "foo", b = "bar" -> return "foo/bar"
 };
 
-normalizeLexically : Path(p : Path) {
+export
+normalize : Path(p : Path.ref) {
   ;; TODO:
   ;; - remove "./" where possible
   ;;   "foo/./bar" -> "foo/bar"
@@ -21,7 +24,8 @@ normalizeLexically : Path(p : Path) {
   ;;   "foo//bar" -> "foo/bar"
 };
 
-absolute : Path(p : Path) {
+export
+absolute : Path(p : Path.ref) {
   ;; See C++ std.cc
   ;; TODO: Requires passing string from C++
   ;; __c_path_absolute p.string.data;

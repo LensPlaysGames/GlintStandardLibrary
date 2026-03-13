@@ -1,5 +1,8 @@
 module shellcmd;
 
+external
+_c_system : cint(command : byte.ptr);
+
 export
 run-command-simple : cint(command : byte.ptr)
   _c_system command;
