@@ -5,9 +5,11 @@ project(GlintStandardLibrary LANGUAGES C CXX Glint)
 
 add_library(
   gstd
-  src/io.g
-  src/path.g
-  src/shellcmd.g
   src/std.c
   src/std.cc
+
+  src/shellcmd.g
+  src/path.g
+
+  src/io.g
 )
