@@ -1,6 +1,6 @@
 * Glint Standard Library
 
-The standard library for Glint, the language covered by [[https://github.com/LensPlaysGames/LensorCompilerCollection/blob/main/docs/glint/thebook.pdf][this book]] and compiled by [[https://github.com/LensPlaysGames/LensorCompilerCollection][this compiler]].
+The standard library for Glint, the language covered by [[https://lensplaysgames.github.io/LensorCompilerCollection/thebook.html][this book]] and compiled by [[https://github.com/LensPlaysGames/LensorCompilerCollection][this compiler]].
 
 We provide useful and common solutions (via Glint modules) for problems that you have already solved before, like reading a file, or doing certain string things, or whathaveyou.
 
